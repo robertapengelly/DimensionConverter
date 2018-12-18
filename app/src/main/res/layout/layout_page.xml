@@ -37,6 +37,8 @@
             
             <Spinner
                 android:background="@android:color/transparent"
+                android:focusable="true" 
+                android:focusableInTouchMode="true"
                 android:id="@+id/spinner_from"
                 android:layout_centerVertical="true"
                 android:layout_height="wrap_content"
@@ -94,6 +96,8 @@
             
             <Spinner
                 android:background="@android:color/transparent"
+                android:focusable="true" 
+                android:focusableInTouchMode="true"
                 android:id="@+id/spinner_to"
                 android:layout_centerVertical="true"
                 android:layout_height="wrap_content"

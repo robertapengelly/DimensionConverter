@@ -27,6 +27,7 @@ import  robertapengelly.dimensionconverter.R;
 public class PageFragment extends Fragment implements
     AdapterView.OnItemSelectedListener,
     TextView.OnEditorActionListener,
+    View.OnClickListener,
     View.OnFocusChangeListener {
     
     private String prev_from, prev_to;
@@ -185,6 +186,18 @@ public class PageFragment extends Fragment implements
         }
         
         return val;
+    
+    }
+    
+    @Override
+    public void onClick(View view) {
+    
+        if (!(view instanceof Spinner)) {
+            return;
+        }
+        
+        View parent = (View) view.getParent();
+        parent.setSelected(!parent.isSelected());
     
     }
     
