@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+    <string-array name="metrics">
+        <item>Millimeter</item>
+        <item>Centimeter</item>
+        <item>Meter</item>
+    </string-array>
+    
+    <string-array name="tab_titles">
+        <item>Units</item>
+        <item>Areas</item>
+        <item>Volumes</item>
+    </string-array>
+    
+    <string-array name="volumes">
+        <item>Cubic millimeter</item>
+        <item>Cubic centimeter</item>
+        <item>Cubic meter</item>
+    </string-array>
+    
+    <string-array name="areas">
+        <item>Squared millimeter</item>
+        <item>Squared centimeter</item>
+        <item>Squared meter</item>
+    </string-array>
+
+</resources>
