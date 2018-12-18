@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    tools:context="robertapengelly.dimensionconverter.MainActivity">
+    tools:context="robertapengelly.dimensionconverter.MainActivity"
+    tools:ignore="PrivateResource">
     
     <include layout="@layout/layout_appbar" />
     
