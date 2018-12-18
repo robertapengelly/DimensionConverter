@@ -189,6 +189,7 @@ public class PageFragment extends Fragment implements
     }
     
     @Override
+    @SuppressWarnings("unchecked")
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     
         final View view = inflater.inflate(R.layout.layout_page, container, false);
@@ -239,6 +240,10 @@ public class PageFragment extends Fragment implements
                 
                     String metric = (String) adapter.getItem(i);
                     
+                    if (metric == null) {
+                        continue;
+                    }
+                    
                     if (multiple && !metric.endsWith("s")) {
                         metric = metric.concat("s");
                     } else if (!multiple && metric.endsWith("s")) {
@@ -283,6 +288,10 @@ public class PageFragment extends Fragment implements
                 for (int i = 0; i < count; i++) {
                 
                     String metric = (String) adapter.getItem(i);
+                    
+                    if (metric == null) {
+                        continue;
+                    }
                     
                     if (multiple && !metric.endsWith("s")) {
                         metric = metric.concat("s");
