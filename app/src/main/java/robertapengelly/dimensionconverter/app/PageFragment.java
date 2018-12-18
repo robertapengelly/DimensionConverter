@@ -77,7 +77,7 @@ public class PageFragment extends Fragment implements
             val = calculateArea(val, src_metric, dst_metric);
         
         } else {
-            val = calculatemetric(val, src_metric, dst_metric);
+            val = calculateUnit(val, src_metric, dst_metric);
         }
         
         txt_val = val.toPlainString();
@@ -124,7 +124,7 @@ public class PageFragment extends Fragment implements
     
     }
     
-    private BigDecimal calculatemetric(BigDecimal val, String src_metric, String dst_metric) {
+    private BigDecimal calculateUnit(BigDecimal val, String src_metric, String dst_metric) {
     
         if (src_metric.equals("millimeter")) {
         
