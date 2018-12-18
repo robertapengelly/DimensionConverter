@@ -17,14 +17,13 @@ import  java.util.Arrays;
 
 import  robertapengelly.dimensionconverter.app.ViewPagerAdapter;
 
-public class MainActivity extends AppCompatActivity implements ViewTreeObserver.OnPreDrawListener {
+public class MainActivity extends AppCompatActivity {
 
     private ArrayList<String> metrics;
     private ArrayList<String> tab_titles;
     
     private ViewPagerAdapter adapter;
     private Toolbar appbar;
-    private ViewGroup layout;
     private TabLayout layout_tabs;
     private ViewPager viewpager;
     
@@ -71,9 +70,6 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        layout = findViewById(R.id.activity_main);
-        layout.getViewTreeObserver().addOnPreDrawListener(this);
-        
         appbar = findViewById(R.id.appbar);
         setSupportActionBar(appbar);
         adjustIfNeeded(new View[] { appbar });
@@ -87,16 +83,6 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
         
         layout_tabs = findViewById(R.id.layout_tabs);
         layout_tabs.setupWithViewPager(viewpager);
-    
-    }
-    
-    @Override
-    public boolean onPreDraw() {
-    
-        layout.getViewTreeObserver().removeOnPreDrawListener(this);
-        //edittext_from.setText("1");
-        
-        return true;
     
     }
 
